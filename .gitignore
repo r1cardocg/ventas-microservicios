@@ -1,0 +1,36 @@
+# Entorno virtual
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Variables de entorno
+.env
+
+# Credenciales (MUY IMPORTANTE)
+serviceAccountKey.json
+
+# Configuración IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+*.swp
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de build
+build/
+dist/
+*.egg-info/
