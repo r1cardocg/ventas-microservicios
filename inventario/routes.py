@@ -6,6 +6,7 @@ bp = Blueprint('productos', __name__)
 def ref():
     return firebase_db.reference('/productos')
 
+
 @bp.route('/productos', methods=['POST'])
 def add_producto():
     data = request.json

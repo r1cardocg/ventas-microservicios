@@ -4,13 +4,13 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const ventasRoutes = require('./routes/ventas');
-
+const verificarGateway = require('./middlewares/verificarGateway'); 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
-
+app.use(verificarGateway); 
 app.use('/api/ventas', ventasRoutes);
 
 app.get('/', (req, res) => {
