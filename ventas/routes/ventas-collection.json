@@ -1,0 +1,94 @@
+{
+  "clientName": "Thunder Client",
+  "collectionName": "Microservicio Ventas - Express",
+  "collectionId": "ventas-express-001",
+  "dateExported": "2026-03-14",
+  "version": "1.1",
+  "folders": [],
+  "requests": [
+    {
+      "name": "Registrar venta",
+      "_id": "req-001",
+      "colId": "ventas-express-001",
+      "url": "http://localhost:3001/api/ventas",
+      "method": "POST",
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"usuarioId\": \"user123\",\n  \"productoId\": \"-NxAbc123\",\n  \"cantidad\": 2,\n  \"total\": 50000\n}"
+      }
+    },
+    {
+      "name": "Registrar venta - sin campos (error 400)",
+      "_id": "req-002",
+      "colId": "ventas-express-001",
+      "url": "http://localhost:3001/api/ventas",
+      "method": "POST",
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"usuarioId\": \"user123\"\n}"
+      }
+    },
+    {
+      "name": "Consultar todas las ventas",
+      "_id": "req-003",
+      "colId": "ventas-express-001",
+      "url": "http://localhost:3001/api/ventas",
+      "method": "GET",
+      "headers": []
+    },
+    {
+      "name": "Consultar ventas por fecha",
+      "_id": "req-004",
+      "colId": "ventas-express-001",
+      "url": "http://localhost:3001/api/ventas?desde=2026-01-01&hasta=2026-12-31",
+      "method": "GET",
+      "headers": []
+    },
+    {
+      "name": "Consultar ventas por usuario",
+      "_id": "req-005",
+      "colId": "ventas-express-001",
+      "url": "http://localhost:3001/api/ventas/usuario/user123",
+      "method": "GET",
+      "headers": []
+    },
+    {
+      "name": "Consultar ventas por usuario + fecha",
+      "_id": "req-006",
+      "colId": "ventas-express-001",
+      "url": "http://localhost:3001/api/ventas/usuario/user123?desde=2026-01-01&hasta=2026-12-31",
+      "method": "GET",
+      "headers": []
+    },
+    {
+      "name": "Consultar venta por ID",
+      "_id": "req-007",
+      "colId": "ventas-express-001",
+      "url": "http://localhost:3001/api/ventas/REEMPLAZAR_CON_ID_REAL",
+      "method": "GET",
+      "headers": []
+    },
+    {
+      "name": "Consultar venta - ID inexistente (error 404)",
+      "_id": "req-008",
+      "colId": "ventas-express-001",
+      "url": "http://localhost:3001/api/ventas/000000000000000000000000",
+      "method": "GET",
+      "headers": []
+    },
+    {
+      "name": "Health check",
+      "_id": "req-009",
+      "colId": "ventas-express-001",
+      "url": "http://localhost:3001/",
+      "method": "GET",
+      "headers": []
+    }
+  ]
+}
